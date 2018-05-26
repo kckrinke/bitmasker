@@ -23,21 +23,21 @@
 //
 // For example, given this snippet,
 //
-//	package mental
+//  package mental
 //
-//	type State uint
+//  type State uint
 //
-//	const (
-//		Unconscious State = 0
-//		Conscious   State = (1 << iota)
-//		Meditative
-//		Distracted
+//  const (
+//    Unconscious State = 0
+//    Conscious   State = (1 << iota)
+//    Meditative
+//    Distracted
 //    Entertained = Distracted
-//	)
+//  )
 //
 // running this command
 //
-//	bitmasker -type=State
+//  bitmasker -type=State
 //
 // in the same directory will create the file state_bitmask.go, in package mental,
 // containing a definition of the following:
@@ -71,7 +71,7 @@
 //
 // Typically this process would be run using go generate, like this:
 //
-//	//go:generate bitmasker -type=State
+//  //go:generate bitmasker -type=State
 //
 // If multiple constants have the same value, the lexically first matching name will
 // be used (in the example, Entertained will print as "Distracted").
